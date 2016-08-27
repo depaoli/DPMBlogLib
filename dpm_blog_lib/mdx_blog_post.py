@@ -1,14 +1,16 @@
+#!/usr/bin/env python
+
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
 
 class SetTableClass(Treeprocessor):
 
     def run(self, root):
-        '''
+        """
         Automatically called when the processor is invoked, 'root' is automatically passed
         at runtime by the Markdown core as ElementTree object representing the HTML
         document
-        '''
+        """
         self.set_table_class(root)
         # Some may be inclined to return the modified root element. While that would work,
         # it would cause a copy of the entire ElementTree to be generated each time the
@@ -25,11 +27,11 @@ class SetTableClass(Treeprocessor):
 class SetLinkTarget(Treeprocessor):
 
     def run(self, root):
-        '''
+        """
         Automatically called when the processor is invoked, 'root' is automatically passed
         at runtime by the Markdown core as ElementTree object representing the HTML
         document
-        '''
+        """
         self.set_link_target(root)
         # Some may be inclined to return the modified root element. While that would work,
         # it would cause a copy of the entire ElementTree to be generated each time the

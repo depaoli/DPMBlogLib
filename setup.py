@@ -35,7 +35,16 @@ args = dict(
     # Tells distribute to look for a MANIFEST.in file
     # and wrap-up all the entries that match inside the package itself
     # (rather than declaring "package_data" arg)
-    include_package_data = True
+    include_package_data = True,
+
+    # Abstract dependencies (traditional Python package distribution); concrete source/s
+    # on "requirements.txt" file
+    install_requires = [
+        # Needed for management of the Columns
+        'GitPython>=1.0.1',
+        # Needed to manages Python-Markdown API for custom extension
+        'Markdown>=2.6.6',
+    ],
 )
 
 setup(**args)

@@ -1,9 +1,12 @@
 #
-# App dependencies/libraries for PyPI
+# Non-redistributable concrete dependencies source (PyPI), abstract dependencies
+# declared on setup.py .
+# Use this file to modify source (either remote or filesystem) for one or more dependency.
 #
 
-# Needed for management of the Columns
-GitPython>=1.0.1
+# Default parameter made explicit
+--index-url https://pypi.python.org/simple/
 
-# Needed to manages Python-Markdown API for custom extension
-Markdown>=2.6.6
+# This causes pip to run "python setup.py develop" to install your package and resolve
+# your dependencies (traditional Python package distribution)
+--editable .
