@@ -1,0 +1,9 @@
+#
+# App dependencies/libraries for PyPI
+#
+
+# Needed for management of the Columns
+GitPython>=1.0.1
+
+# Needed to manages Python-Markdown API for custom extension
+Markdown>=2.6.6
