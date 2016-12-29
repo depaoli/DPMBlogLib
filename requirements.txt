@@ -4,9 +4,9 @@
 # Use this file to modify source (either remote or filesystem) for one or more dependency.
 #
 
-# Default parameter made explicit
+# Default (implicit) parameter made explicit for clarity
 --index-url https://pypi.python.org/simple/
 
-# This causes pip to run "python setup.py develop" to install your package and resolve
-# your dependencies (traditional Python package distribution)
---editable .
+# The current application is declared as dependency
+# (i.e. trigger the transitive dependencies of the setup.py located in the current folder)
+.
